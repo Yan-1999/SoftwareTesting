@@ -10,7 +10,7 @@
 #include <cppunit/TestCase.h>
 #include <cppunit/TestSuite.h>
 
-#include "test_common.h"
+#include "../test_common.h"
 #include "triangle.h"
 
 

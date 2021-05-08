@@ -9,7 +9,7 @@
 #include <cppunit/TestCase.h>
 #include <cppunit/TestSuite.h>
 
-#include "triangle.h"
+//#include "triangle.h"
 
 template<typename RetTy, typename ...ArgTy>
 struct TestData

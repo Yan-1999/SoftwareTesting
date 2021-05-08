@@ -5,7 +5,7 @@
 
 #include <cppunit/TestAssert.h>
 
-#include "test_common.h"
+#include "../test_common.h"
 
 constexpr const char* TRIANGLE_TYPE_NAME[] =
 {
