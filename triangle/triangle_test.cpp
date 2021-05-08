@@ -58,7 +58,7 @@ const std::vector<TriangleTestData> TEST_CASE_BWR =
 
 const std::vector<TriangleTestData> TEST_CASE_EQV =
 {
-	{Triangle::Type::NON, {NORMAL_VAL, NORMAL_VAL, NORMAL_VAL}},
+	{Triangle::Type::EQUILATERAL, {NORMAL_VAL, NORMAL_VAL, NORMAL_VAL}},
 	{Triangle::Type::ISOSCELES, {1, NORMAL_VAL, NORMAL_VAL}},
 	{Triangle::Type::SCALENE, {3, 4, 5}},
 	{Triangle::Type::NON, {0, NORMAL_VAL, NORMAL_VAL}},
