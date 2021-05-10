@@ -7159,520 +7159,299 @@ body.skin-3 {
 
 
     var resultData = {
-    "testPass": 39,
+    "testPass": 22,
     "testResult": [
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_01",
-            "description": "【输入】(3.656, 200.0, '6')【无效】输入有值不为整形",
+            "description": "【输入】1547657【无效】输入字符串不等于8位",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_02",
-            "description": "【输入】(3.0, 20.453, '6')【无效】输入有值不为整形",
+            "description": "【输入】192367821【无效】输入字符串不等于8位",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_03",
-            "description": "【输入】(3.0, 200.0, 'JUNE')【无效】输入有值不为整形",
-            "spendTime": "0.0 s",
+            "description": "【输入】1923JULY【无效】输入字符串无法转换为整数",
+            "spendTime": "0.000816 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_04",
-            "description": "【输入】(2.0, 0.0, '9')【无效】用户通话时间不大于0 【边界值】通话时间略小于左边界",
+            "description": "【输入】18990324【无效】年<1900 【边界值】年略小于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_05",
-            "description": "【输入】(-1.0, 140.0, '5')【无效】用户本年度不按时缴费次数小于0 【边界值】用户缴费略小于边界值",
-            "spendTime": "0.0 s",
+            "description": "【输入】19000324【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】年等于左边界",
+            "spendTime": "0.000219 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_06",
-            "description": "【输入】(5.0, 140.0, '5')【无效】用户本年度不按时缴费次数不小于月份 【边界值】用户缴费略大于边界值",
+            "description": "【输入】19770324【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】年正常值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_07",
-            "description": "【输入】(0.0, 140.0, '5')【有效】用户不按时缴费次数[0,月份) 【边界值】用户缴费等于左边界",
+            "description": "【输入】20500324【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】年等于右边界",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_08",
-            "description": "【输入】(4.0, 140.0, '5')【有效】用户不按时缴费次数[0,月份) 【边界值】用户缴费等于右边界",
+            "description": "【输入】20510324【无效】年<1900 【边界值】年略大于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_09",
-            "description": "【输入】(2.0, 140.0, '5')【有效】用户不按时缴费次数[0,月份) 【边界值】用户缴费为正常值",
+            "description": "【输入】19770700【无效】日期<1 【边界值】日略小于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_10",
-            "description": "【输入】(0.0, 170.0, '0')【无效】月份小于1",
-            "spendTime": "0.000997 s",
+            "description": "【输入】19770701【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】日等于左边界",
+            "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_11",
-            "description": "【输入】(0.0, 170.0, '13')【无效】月份大于12",
+            "description": "【输入】19770718【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】日正常值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_12",
-            "description": "【输入】(0.0, 1.0, '6')【有效】用户通话时间(0,60] 享受折扣 【边界值】通话时间为边界值1",
+            "description": "【输入】19770731【有效】年=[1900,2050] 月=[1，3，5，7，8，10，12] 日=[1-31] 【边界值】日等于右边界",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_13",
-            "description": "【输入】(0.0, 60.0, '6')【有效】用户通话时间(0,60] 享受折扣 【边界值】通话时间为边界值60",
+            "description": "【输入】19770732【无效】日期>最大日期 【边界值】日略大于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_14",
-            "description": "【输入】(2.0, 61.0, '7')【有效】用户通话时间(60，120] 享受折扣 【边界值】通话时间为边界值61",
+            "description": "【输入】20140927【有效】年=[1900,2050] 月=[4，6，9，11] 日=[1-30] 【边界值】日正常值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_15",
-            "description": "【输入】(2.0, 120.0, '7')【有效】用户通话时间(60，120] 享受折扣【边界值】通话时间为边界值120",
-            "spendTime": "0.0 s",
+            "description": "【输入】20140930【有效】年=[1900,2050] 月=[4，6，9，11] 日=[1-30] 【边界值】日右边界值",
+            "spendTime": "0.000771 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_16",
-            "description": "【输入】(1.0, 121.0, '4')【有效】用户通话时间(120,180] 享受折扣 【边界值】通话时间为边界值121",
+            "description": "【输入】20140931【无效】日期>最大日期 【边界值】日略大于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_17",
-            "description": "【输入】(1.0, 180.0, '4')【有效】用户通话时间(120,180] 享受折扣 【边界值】通话时间为边界值180",
+            "description": "【输入】19850221【有效】月=2，年=平年 日 =[1,28]【边界值】日正常值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_18",
-            "description": "【输入】(3.0, 181.0, '8')【有效】用户通话时间(180,300] 享受折扣【边界值】通话时间为边界值181",
+            "description": "【输入】19850228【有效】月=2，年=平年 日 =[1,28]【边界值】日右边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_19",
-            "description": "【输入】(3.0, 300.0, '8')【有效】用户通话时间(180,300] 享受折扣 【边界值】通话时间为边界值300",
+            "description": "【输入】19850229【无效】日期>最大日期 【边界值】日略大于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_20",
-            "description": "【输入】(4.0, 301.0, '11')【有效】用户通话时间>300 享受折扣 【边界值】通话时间为边界值301",
-            "spendTime": "0.000569 s",
+            "description": "【输入】20240214【有效】月=2，年=闰年 日 =[1,28]【边界值】日正常值",
+            "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_21",
-            "description": "【输入】(2.0, 1.0, '6')【有效】用户通话时间(0,60] 不享受折扣【边界值】通话时间为边界值1",
+            "description": "【输入】20240229【有效】月=2，年=闰年 日 =[1,28]【边界值】日右边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         },
         {
-            "className": "TestPhoneCharge",
+            "className": "TestCalendar",
             "methodName": "test_getDayOfWeek_22",
-            "description": "【输入】(2.0, 60.0, '6')【有效】用户通话时间(0,60] 不享受折扣【边界值】通话时间为边界值60",
+            "description": "【输入】20240230【无效】日期>最大日期 【边界值】日略大于边界值",
             "spendTime": "0.0 s",
             "status": "成功",
             "log": [
                 "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_23",
-            "description": "【输入】(5.0, 61.0, '10')【有效】用户通话时间(60,120] 不享受折扣【边界值】通话时间为边界值61",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_24",
-            "description": "【输入】(5.0, 120.0, '10')【有效】用户通话时间(60,120] 不享受折扣【边界值】通话时间为边界值120",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_25",
-            "description": "【输入】(7.0, 121.0, '12')【有效】用户通话时间(120，180] 不享受折扣【边界值】通话时间为边界值121",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_26",
-            "description": "【输入】(7.0, 180.0, '12')【有效】用户通话时间(120，180] 不享受折扣【边界值】通话时间为边界值180",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_27",
-            "description": "【输入】(4.0, 181.0, '8')【有效】用户通话时间(180，300] 不享受折扣【边界值】通话时间为边界值181",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_28",
-            "description": "【输入】(4.0, 300.0, '8')【有效】用户通话时间(180，300] 不享受折扣【边界值】通话时间为边界值300",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_29",
-            "description": "【输入】(9.0, 301.0, '11')【有效】用户通话时间>300 不享受折扣【边界值】通话时间为边界值301",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_30",
-            "description": "【输入】(0.0, 35.0, '6')【有效】用户通话时间(0,60] 享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_31",
-            "description": "【输入】(2.0, 101.0, '7')【有效】用户通话时间(60,120] 享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_32",
-            "description": "【输入】(1.0, 142.0, '4')【有效】用户通话时间(120,180] 享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_33",
-            "description": "【输入】(3.0, 240.0, '8')【有效】用户通话时间(180,300] 享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_34",
-            "description": "【输入】(4.0, 430.0, '11')【有效】用户通话时间>300 享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_35",
-            "description": "【输入】(2.0, 35.0, '6')【有效】用户通话时间(0,60] 不享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_36",
-            "description": "【输入】(3.0, 101.0, '7')【有效】用户通话时间(60，120] 不享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_37",
-            "description": "【输入】(5.0, 142.0, '9')【有效】用户通话时间(120，180] 不享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_38",
-            "description": "【输入】(5.0, 240.0, '8')【有效】用户通话时间(180，300] 不享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
-                "do something after test.Clean up.",
-                ""
-            ]
-        },
-        {
-            "className": "TestPhoneCharge",
-            "methodName": "test_getDayOfWeek_39",
-            "description": "【输入】(7.0, 430.0, '11')【有效】用户通话时间>300 不享受折扣【边界值】通话时间正常值",
-            "spendTime": "0.0 s",
-            "status": "成功",
-            "log": [
-                "do something before test.Prepare environment.",
-                "testing phone charge",
+                "testing calendar",
                 "do something after test.Clean up.",
                 ""
             ]
         }
     ],
-    "testName": "电信收费系统测试",
-    "testAll": 39,
+    "testName": "万年历，输入年月日得到星期几",
+    "testAll": 22,
     "testFail": 0,
-    "beginTime": "2021-05-10 20:27:28",
+    "beginTime": "2021-05-10 20:33:43",
     "totalTime": "0s",
     "testSkip": 0,
     "testError": 0

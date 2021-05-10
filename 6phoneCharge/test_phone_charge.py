@@ -27,4 +27,7 @@ class TestPhoneCharge(unittest.TestCase):
     def test_getDayOfWeek(self, test_case):
         print("testing phone charge")
         input1, input2, input3 = test_case["input"]
-        self.assertEqual(test_case["answer"], get_charge(input1, input2, input3))
+        if len(test_case["answer"])<10:
+            self.assertEqual(float(test_case["answer"]), get_charge(input1, input2, input3))
+        else:
+            self.assertEqual(test_case["answer"], get_charge(input1, input2, input3))

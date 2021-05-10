@@ -61,4 +61,6 @@ def get_charge(fail_times, phone_call_time, month):
     else:
         fee = 25 + phone_call_time * 0.15
 
-    return str(fee)
+    fee = float(round(fee, 3))
+
+    return fee
