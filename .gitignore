@@ -39,3 +39,6 @@
 
 *.sln
 *.vcxproj*
+
+Debug/
+Release/
