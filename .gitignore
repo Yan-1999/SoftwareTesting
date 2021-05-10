@@ -35,3 +35,7 @@
 /CMakeLists.txt
 /.idea
 /cmake-build-debug
+/.vs
+
+*.sln
+*.vcxproj*
