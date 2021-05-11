@@ -7,6 +7,7 @@
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
 #include <cppunit/XMLOutputter.h>
+#include <tinyxml2.h>
 
 #include "triangle/triangle_test.h"
 #include "sale/sale_test.h"
@@ -35,8 +36,22 @@ int main(int argc, char* argv[])
 	std::string s = ss.str();
 	size_t index = s.find_last_of('?');
 	s.insert(index + 2, style_str);
+
+	tinyxml2::XMLDocument doc;
+	doc.Parse(s.c_str());
+	tinyxml2::XMLElement* class_num_node = doc.NewElement("TestClassNum");
+	class_num_node->SetText(2);
+	doc.RootElement()->FirstChildElement("Statistics")
+		->InsertFirstChild(class_num_node);
+	tinyxml2::XMLElement* set_num_node = doc.NewElement("TestSetNum");
+	set_num_node->SetText(3);
+	doc.RootElement()->FirstChildElement("Statistics")
+		->InsertFirstChild(set_num_node);
+	tinyxml2::XMLPrinter printer;
+	doc.Print(&printer);
+
 	std::cout << cgicc::HTTPContentHeader("application/xml");
-	std::cout << s << std::flush;
+	std::cout << printer.CStr() << std::flush;
 
 	return !trc.wasSuccessful();
 }

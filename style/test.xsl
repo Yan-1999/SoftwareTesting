@@ -47,6 +47,22 @@
                 </tr>
               </table>
             </div>
+            <div class="card item">
+              <table id="product-info" class="summary" frame="below">
+                <tr>
+                  <th>总测试类数</th>
+                  <td>
+                    <xsl:value-of select="TestRun/Statistics/TestClassNum" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>总测试数</th>
+                  <td>
+                    <xsl:value-of select="TestRun/Statistics/TestSetNum" />
+                  </td>
+                </tr>
+              </table>
+            </div>
             <div class="clear"></div>
             <h3>失败的测试 Failed Tests</h3>
             <table id="product-info" frame= "below">
