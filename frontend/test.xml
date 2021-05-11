@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<?xml-stylesheet type="text/xsl" href="test.xsl"?>
+<TestRun>
+  <FailedTests>
+    <FailedTest id="20">
+      <Name>class Triangle - Equivalent Class Test 0</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>D:\GitHub\SoftwareTesting\test_common.h</File>
+        <Line>45</Line>
+      </Location>
+      <Message>equality assertion failed
+- Expected: EQUILATERAL
+- Actual  : NON
+- Input   : (1073741823,1073741823,1073741823,)
+</Message>
+    </FailedTest>
+  </FailedTests>
+  <SuccessfulTests>
+    <Test id="1">
+      <Name>class Triangle - Boundary Test 0</Name>
+    </Test>
+    <Test id="2">
+      <Name>class Triangle - Boundary Test 1</Name>
+    </Test>
+    <Test id="3">
+      <Name>class Triangle - Boundary Test 2</Name>
+    </Test>
+    <Test id="4">
+      <Name>class Triangle - Boundary Test 3</Name>
+    </Test>
+    <Test id="5">
+      <Name>class Triangle - Boundary Test 4</Name>
+    </Test>
+    <Test id="6">
+      <Name>class Triangle - Boundary Test 5</Name>
+    </Test>
+    <Test id="7">
+      <Name>class Triangle - Boundary Test 6</Name>
+    </Test>
+    <Test id="8">
+      <Name>class Triangle - Boundary Test 7</Name>
+    </Test>
+    <Test id="9">
+      <Name>class Triangle - Boundary Test 8</Name>
+    </Test>
+    <Test id="10">
+      <Name>class Triangle - Boundary Test 9</Name>
+    </Test>
+    <Test id="11">
+      <Name>class Triangle - Boundary Test 10</Name>
+    </Test>
+    <Test id="12">
+      <Name>class Triangle - Boundary Test 11</Name>
+    </Test>
+    <Test id="13">
+      <Name>class Triangle - Boundary Test 12</Name>
+    </Test>
+    <Test id="14">
+      <Name>class Triangle - Boundary Test 13</Name>
+    </Test>
+    <Test id="15">
+      <Name>class Triangle - Boundary Test 14</Name>
+    </Test>
+    <Test id="16">
+      <Name>class Triangle - Boundary Test 15</Name>
+    </Test>
+    <Test id="17">
+      <Name>class Triangle - Boundary Test 16</Name>
+    </Test>
+    <Test id="18">
+      <Name>class Triangle - Boundary Test 17</Name>
+    </Test>
+    <Test id="19">
+      <Name>class Triangle - Boundary Test 18</Name>
+    </Test>
+    <Test id="21">
+      <Name>class Triangle - Equivalent Class Test 1</Name>
+    </Test>
+    <Test id="22">
+      <Name>class Triangle - Equivalent Class Test 2</Name>
+    </Test>
+    <Test id="23">
+      <Name>class Triangle - Equivalent Class Test 3</Name>
+    </Test>
+    <Test id="24">
+      <Name>class Triangle - Equivalent Class Test 4</Name>
+    </Test>
+    <Test id="25">
+      <Name>class Triangle - Equivalent Class Test 5</Name>
+    </Test>
+    <Test id="26">
+      <Name>class Triangle - Equivalent Class Test 6</Name>
+    </Test>
+    <Test id="27">
+      <Name>class Triangle - Equivalent Class Test 7</Name>
+    </Test>
+    <Test id="28">
+      <Name>class Triangle - Equivalent Class Test 8</Name>
+    </Test>
+  </SuccessfulTests>
+  <Statistics>
+    <Tests>28</Tests>
+    <FailuresTotal>1</FailuresTotal>
+    <Errors>0</Errors>
+    <Failures>1</Failures>
+  </Statistics>
+</TestRun>

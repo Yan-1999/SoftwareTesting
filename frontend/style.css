@@ -136,7 +136,6 @@ input {
     input[type="button"] {
         border: none;
         border-radius: 10px;
-        height: 40px;
         background: #649031;
         color: white;
     }
@@ -156,7 +155,7 @@ th {
 }
 
 .summary th{
-    width: 200px;
+    width: 5rem;
 }
 
 header {
@@ -225,6 +224,7 @@ div.item {
     }
 
 span.item-name {
+    font-size: 1.3rem;
     color: black;
     display: block;
     padding: 20px 20px 0 20px;
@@ -276,8 +276,6 @@ div#add-to-cart {
 }
 
 div.card-product-info {
-    min-height: 460px;
-    width: calc(100% - 580px);
     padding: 20px;
     margin: 10px;
     float: left;

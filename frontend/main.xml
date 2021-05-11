@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/main.xsl"?>
+
+<TestInfo>
+    <Test id="1">
+        <img>/img/1.jpg</img>
+        <name>
+            三角形类型问题
+        </name>
+        <class>
+            Triangle
+        </class>
+        <func>
+            <name>
+                solve
+            </name>
+            <method>
+                Boundary Test
+            </method>
+            <method>
+                Equivalent Class Test
+            </method>
+        </func>
+        <lang>
+            C++
+        </lang>
+        <ver>
+            2021-5-10 09:05:03
+        </ver>
+    </Test>
+    <Test id="3">
+        <img>/img/3.jpg</img>
+        <name>
+            电脑销售系统
+        </name>
+        <class>
+            Sale
+        </class>
+        <func>
+            <name>
+                solve
+            </name>
+            <method>
+                Boundary Test
+            </method>
+        </func>
+        <lang>
+            C++
+        </lang>
+    </Test>
+    <Test id="6">
+        <img>/img/6.jpg</img>
+        <name>
+            电信收费系统
+        </name>
+        <func>
+            <name>
+                get_charge
+            </name>
+            <method>
+                Boundary Test
+            </method>
+        </func>
+            <lang>
+                Python
+            </lang>
+    </Test>
+    <Test id="8">
+        <img>/img/8.jpg</img>
+        <name>
+            万年历问题
+        </name>
+        <func>
+            <name>
+                test_getDayOfWeek
+            </name>
+            <method>
+                Boundary Test
+            </method>
+            <method>
+                Equivalent Class Test
+            </method>
+        </func>
+        <lang>
+            Python
+        </lang>
+    </Test>
+</TestInfo>
