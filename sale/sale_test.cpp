@@ -50,7 +50,8 @@ const std::vector<SaleTestData> TEST_CASE_BWR =
 		{600, {30, 30, 30}},
 		{1400, {70, 70, 70}},
 		{1640, {70, 80, 90}},
-		{-1, {71, 81, 91}},
+		{-1, {71, 80, 90}},
+		{-1, {70, 81, 91}},
 };
 
 SaleBoundaryTest::SaleBoundaryTest()
