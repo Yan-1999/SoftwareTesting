@@ -1,0 +1,345 @@
+html {
+    height: 100%;
+    min-width: 800px;
+}
+
+body {
+    margin: 0;
+    background: white;
+    height: calc(100% - 50px);
+    font-weight: normal;
+}
+
+.anchor {
+    position: relative;
+    top: -50px;
+}
+
+.banner {
+    background: linear-gradient(#8bc24c, #649031);
+    background-repeat: repeat;
+    padding: 40px;
+    margin: 0;
+}
+
+.card {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /*float: left;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.fullwidth-card {
+    width: 100%;
+}
+
+.goto-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #649031;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+    height: 20px;
+}
+
+.price {
+    font-size: 1.3rem;
+    display: block;
+    font-weight: bold;
+    color: #649031;
+}
+
+.failure {
+    font-size: 1.3rem;
+    display: block;
+    font-weight: bold;
+    color: #D00;
+}
+
+h1 {
+    font-family:  "Source Han Serif";
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
+}
+
+h3 {
+    font-family:  "Source Han Serif";
+    font-size: 1.5rem;
+    padding: 5px 0px;
+    color: #649031;
+    border-bottom: 5px solid #649031;
+    text-align: left;
+}
+
+    h3 img.logo {
+        padding: 0 10px;
+    }
+
+caption, .card h3 {
+    margin: 10px;
+    padding: 0px;
+    color: #649031;
+    border-bottom: 5px solid #649031;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
+
+h4 {
+    color: #8bc24c;
+}
+
+input {
+    border: 2px solid #649031;
+    border-radius: 10px;
+}
+
+    input[type="number"] {
+        text-align: right;
+        font-size: 30px;
+        width: 200px;
+        height: 40px;
+    }
+
+        input[type="number"]:invalid {
+            border-color: #de4307;
+            border-style: solid;
+        }
+
+    input[type="submit"] {
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        background: #649031;
+        color: white;
+    }
+    input[type="button"] {
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        background: #649031;
+        color: white;
+    }
+
+    input[type="text"], input[type="password"] {
+        height: 40px;
+        width: 200px;
+        font-size: 1.2em;
+        margin: 5px;
+    }
+
+th {
+    width: 3rem;
+    color: #649031;
+    font-weight: bold;
+    text-align: left;
+}
+
+.summary th{
+    width: 200px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: #649031;
+}
+
+    header ul {
+        list-style-type: none;
+        margin: 0 20px 0 20px;
+        padding: 0;
+        overflow: hidden;
+    }
+
+        header ul li.right {
+            float: right;
+        }
+
+    header li a {
+        float: left;
+        display: block;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        height: 20px;
+        padding: 15px;
+        text-decoration: none;
+        outline: none;
+    }
+
+        header li a:hover, a:active {
+            background-color: #de4307;
+            color: white;
+        }
+
+#below-header {
+    margin: 50px 0 0 0;
+    width: 100%;
+    height: calc(100%);
+}
+
+div#headline.small-headline {
+    padding: 20px;
+}
+
+div#bottom-banner p {
+    color: white;
+}
+
+div[id$=main] {
+    margin: 10px 80px;
+    min-height: calc(100% - 258px);
+}
+
+div.item {
+    width: 250px;
+    float: left;
+}
+
+    div.item img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+span.item-name {
+    color: black;
+    display: block;
+    padding: 20px 20px 0 20px;
+}
+
+span.producer {
+    display: block;
+    font-size: 0.8em;
+    color: #649031;
+    padding: 0 20px 0 20px;
+}
+
+span.item-price {
+    float: left;
+    padding: 20px;
+}
+
+span.specification {
+    float: right;
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+div#item-pic-and-cart {
+    width: 420px;
+    float: left;
+}
+
+div#item-pic {
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px 40px;
+}
+
+    div#item-pic img {
+        height: 200px;
+    }
+
+div#add-to-cart {
+    height: 220px;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+div.card-product-info {
+    min-height: 460px;
+    width: calc(100% - 580px);
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
+
+table#product-info {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table#product-info tr {
+        border: 2px dashed #c0c0c0;
+    }
+
+        table#product-info tr:not(.price) {
+            font-size: 1.2em;
+        }
+
+#total-price {
+    padding: 0;
+    width: calc(100% - 10px);
+}
+
+div#cart-btns {
+    margin: 10px;
+}
+
+#btn-buy {
+    background: #de4307;
+}
+
+.listing {
+    padding: 20px;
+    text-align: center;
+}
+
+    .listing td {
+        align-content: center;
+    }
+
+    .listing a,
+    .listing a:hover,
+    .listing a:active {
+        text-decoration: none;
+        background: none;
+        color: black;
+        margin: 0px;
+        outline: none;
+    }
+
+    .listing img {
+        height: 80px;
+        text-align: center;
+    }
+
+
+#login-main {
+    text-align: center;
+}
+
+#login-div {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+}

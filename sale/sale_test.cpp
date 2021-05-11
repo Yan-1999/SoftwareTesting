@@ -12,12 +12,10 @@ const double EPS = 1e-6;
 
 std::string doubleToString(const double &val)
 {
-	char *chCode;
-	chCode = new char[20];
-	sprintf(chCode, "%.2lf", val);
-	std::string str(chCode);
-	delete[] chCode;
-	return str;
+	std::stringstream ss;
+	ss.precision(2);
+	ss << val <<std::flush;
+	return ss.str();
 }
 
 template <>

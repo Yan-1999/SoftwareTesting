@@ -9,6 +9,7 @@
 #include <cppunit/XMLOutputter.h>
 
 #include "triangle/triangle_test.h"
+#include "sale/sale_test.h"
 
 int main(int argc, char* argv[])
 {
@@ -23,8 +24,10 @@ int main(int argc, char* argv[])
 	CppUnit::TestRunner runner;
 	CppUnit::TestSuite* tbt_test_suite = new TriangleBoundaryTest();
 	CppUnit::TestSuite* tect_test_suite = new TriangleEqvClassTest();
+	CppUnit::TestSuite* sbt_test_suite = new SaleBoundaryTest();
 	runner.addTest(tbt_test_suite);
 	runner.addTest(tect_test_suite);
+	runner.addTest(sbt_test_suite);
 	runner.run(tr);
 
 	CppUnit::XmlOutputter out(&trc, ss);
