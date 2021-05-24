@@ -6,7 +6,6 @@
                 <link rel="stylesheet" type="text/css" href="/style.css" />
                 <title></title>
             </head>
-
             <body>
                 <header>
                     <ul>
@@ -26,7 +25,11 @@
                             </a>
                         </li>
                         <li class="right" id="profile">
-                            <a href="">测试套件</a>
+                            <a href="/suite.html">
+                                测试套件(
+                                <span id="suite-count">0</span>
+                                )
+                            </a>
                         </li>
 
                     </ul>
@@ -76,7 +79,7 @@
                                         <xsl:value-of select="name" />
                                     </span>
                                     <span class="producer">
-                                        <xsl:for-each select=".//method" >
+                                        <xsl:for-each select=".//method">
                                             <xsl:value-of select="." />
                                             <xsl:if test="position() &lt; last()">
                                                 <xsl:text>, </xsl:text>
@@ -91,9 +94,10 @@
                         </xsl:for-each>
                     </div>
                     <div class="clear"></div>
-                    <div id="bottom-banner" class="banner">
-                    </div>
+                    <div id="bottom-banner" class="banner"></div>
                 </div>
+                <script type="text/javascript" src="/js/common.js" />
+                <script type="text/javascript" src="/js/suite_cnt.js" />
             </body>
         </html>
     </xsl:template>

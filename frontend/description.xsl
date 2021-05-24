@@ -26,7 +26,11 @@
                             </a>
                         </li>
                         <li class="right" id="profile">
-                            <a href="">测试套件</a>
+                            <a href="../suite.html">
+                                测试套件(
+                                <span id="suite-count">0</span>
+                                )
+                            </a>
                         </li>
 
                     </ul>
@@ -97,7 +101,8 @@
                                 <th>语言</th>
                                 <th>版本</th>
                                 <th>
-                                    <input type="button" action="" value="全部加入测试套件" />
+                                    <!-- <input type="button" action="" value="全部加入测试套件" /> -->
+                                    加入/移出测试套件
                                 </th>
                             </tr>
                             <xsl:for-each select="//method">
@@ -118,7 +123,9 @@
                                         <xsl:value-of select="../../ver" />
                                     </td>
                                     <td>
-                                        <input type="button" value="加入测试套件" />
+                                        <input type="button" value="加入测试套件"
+                                        id="{concat(normalize-space(../../class), ':', normalize-space(../name), ':', normalize-space(.))}"
+                                        onclick="AddToSuite(this)" />
                                     </td>
                                 </tr>
                             </xsl:for-each>
@@ -128,6 +135,9 @@
                     <div id="bottom-banner" class="banner">
                     </div>
                 </div>
+                <script type="text/javascript" src="/js/common.js" />
+                <script type="text/javascript" src="/js/description.js" />
+                <script type="text/javascript" src="/js/suite_cnt.js" />
             </body>
         </html>
     </xsl:template>
