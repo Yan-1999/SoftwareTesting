@@ -1,3 +1,4 @@
+#include <cstring>
 #include <ostream>
 
 #include <cgicc/Cgicc.h>
@@ -23,12 +24,25 @@ int main(int argc, char* argv[])
 	tr.addListener(&trc);
 
 	CppUnit::TestRunner runner;
-	CppUnit::TestSuite* tbt_test_suite = new TriangleBoundaryTest();
-	CppUnit::TestSuite* tect_test_suite = new TriangleEqvClassTest();
-	CppUnit::TestSuite* sbt_test_suite = new SaleBoundaryTest();
-	runner.addTest(tbt_test_suite);
-	runner.addTest(tect_test_suite);
-	runner.addTest(sbt_test_suite);
+	CppUnit::TestSuite* suite = nullptr;
+	for (size_t i = 0; i < argc; i++)
+	{
+		if (!std::strcmp(argv[i], "Triangle:solve:BoundaryTest"))
+		{
+			suite = new TriangleBoundaryTest();
+			runner.addTest(suite);
+		}
+		else if (!std::strcmp(argv[i], "Triangle:solve:EquivalentClassTest"))
+		{
+			suite = new TriangleEqvClassTest();
+			runner.addTest(suite);
+		}
+		else if (!std::strcmp(argv[i], "Sale:solve:BoundaryTest"))
+		{
+			suite = new SaleBoundaryTest();
+			runner.addTest(suite);
+		}
+	}
 	runner.run(tr);
 
 	CppUnit::XmlOutputter out(&trc, ss);

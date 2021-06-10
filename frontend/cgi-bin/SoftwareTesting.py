@@ -6,6 +6,7 @@ import cgi
 from sys import stdout
 import codecs
 from lxml import etree
+from http import cookies
 
 STYLE_BASE = "../htdocs/"
 
@@ -27,7 +28,14 @@ try:
         html_s = transform.apply(test)
         print(str(html_s))
     else:
-        res = os.popen("SoftwareTesting.exe")
+        args = []
+        c = cookies.SimpleCookie()
+        cookie_string = os.environ.get('HTTP_COOKIE')
+        c.load(cookie_string.replace(' ', ''))
+        for key in c.keys():
+            args.append(key)
+
+        res = os.popen(" ".join(["SoftwareTesting.exe"] + args))
         print(res.read())
 except Exception as e:
     print("Content-type:text/plain\n")
