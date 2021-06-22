@@ -8,8 +8,30 @@
 
 #include <cppunit/TestCase.h>
 #include <cppunit/TestSuite.h>
+#include <tinyxml2.h>
 
 //#include "triangle.h"
+
+template<size_t I = 0, typename ...ArgTy>
+void args2Xml(tinyxml2::XMLDocument* doc,
+	tinyxml2::XMLElement* case_elem,
+	const std::tuple<ArgTy...>& args)
+{
+	if constexpr (I == sizeof...(ArgTy))
+	{
+		return;
+	}
+	else
+	{
+		auto arg = std::get<I>(args);
+		tinyxml2::XMLElement* param = doc->NewElement("Param");
+		param->SetText(CppUnit::assertion_traits<decltype(arg)>().toString(arg)
+			.c_str());
+		case_elem->InsertEndChild(param);
+
+		args2Xml<I + 1>(doc, case_elem, args);
+	}
+};
 
 template<typename RetTy, typename ...ArgTy>
 struct TestData
@@ -47,6 +69,9 @@ public:
 
 	auto test_func() { return func_; }
 
+	auto data() { return data_; }
+
+
 private:
 	Ty& instance_;
 	RetTy(Ty::* func_)(ArgTy...);
@@ -61,22 +86,50 @@ class MyTestSuite : public CppUnit::TestSuite
 	using TestClass = Ty;
 
 public:
-	MyTestSuite(RetTy(Ty::* func)(ArgTy...), 
+	MyTestSuite(RetTy(Ty::* func)(ArgTy...),
 		const std::vector<TestData<RetTy, ArgTy...>>& data,
 		Ty instance = Ty(), const char* method = "", int number = 0)
-		:method_(method)
+		:method_(method), data_(data)
 	{
 		std::string name;
 		int i = number;
 
-		for (auto& data : data)
+		for (auto& d : data)
 		{
-			addTest(new MyTestCase(instance, func, data, method, i));
+			addTest(new MyTestCase(instance, func, d, method, i));
 			i++;
 		}
 	}
 
 private:
+
+public:
+
+	std::string data2Xml()
+	{
+		tinyxml2::XMLDocument doc;
+		tinyxml2::XMLPrinter printer;
+		tinyxml2::XMLElement* root = doc.NewElement("Data");
+		doc.InsertFirstChild(root);
+		for (auto& d : data_)
+		{
+			tinyxml2::XMLElement* test_case = doc.NewElement("Case");
+			tinyxml2::XMLElement* ret = doc.NewElement("Expected");
+			ret->SetText(
+				CppUnit::assertion_traits<RetTy>().toString(d.exp_val_)
+				.c_str()
+			);
+			args2Xml(&doc, test_case, d.args_);
+			test_case->InsertFirstChild(ret);
+			root->InsertFirstChild(test_case);
+		}
+		doc.Print(&printer);
+		return std::string(printer.CStr());
+	}
+
+
+private:
+	std::vector<TestData<RetTy, ArgTy...>> data_;
 	const char* method_ = nullptr;
 
 };

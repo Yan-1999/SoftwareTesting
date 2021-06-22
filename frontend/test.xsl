@@ -50,19 +50,13 @@
                                 <tr>
                                     <th>测试样例数</th>
                                     <td>
-                                        <xsl:value-of select="TestRun/Statistics/Tests" />
+                                        <xsl:value-of select="count(TestRun/SuccessfulTests/Test)" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>总失败样例数</th>
                                     <td class="failure">
-                                        <xsl:value-of select="TestRun/Statistics/FailuresTotal" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>错误数</th>
-                                    <td class="failure">
-                                        <xsl:value-of select="TestRun/Statistics/Errors" />
+                                        <xsl:value-of select="count(TestRun/FailedTests/FailedTest)" />
                                     </td>
                                 </tr>
                             </table>
@@ -98,7 +92,7 @@
                             <xsl:for-each select="TestRun/FailedTests/FailedTest">
                                 <tr>
                                     <td>
-                                        <xsl:value-of select="@id" />
+                                        <xsl:value-of select="position()" />
                                     </td>
                                     <td>
                                         <xsl:value-of select="Name" />
@@ -141,6 +135,19 @@
                     </div>
                 </div>
             </body>
+            <script>
+                function deleteCookie(name) {
+                	document.cookie = name + "=" + "" + ";expires=" +
+                		(new Date(1970, 1, 1)).toUTCString() + ";path=/";
+                }
+
+                function getCookieAll() {
+                	return document.cookie.split(';');
+                }
+                cs = getCookieAll();
+                for(var c of cs)
+                    deleteCookie(c.split('=')[0]);
+            </script>
         </html>
     </xsl:template>
 

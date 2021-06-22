@@ -8,30 +8,6 @@
 
 #include "../test_common.h"
 
-const double EPS = 1e-6;
-
-std::string doubleToString(const double &val)
-{
-	std::stringstream ss;
-	ss.precision(2);
-	ss << val <<std::flush;
-	return ss.str();
-}
-
-template <>
-struct CppUnit::assertion_traits<Sale::Result>
-{
-	static bool equal(const Sale::Result &lhs, const Sale::Result &rhs)
-	{
-		return fabs(lhs.val - rhs.val) < EPS;
-	}
-
-	static std::string toString(const Sale::Result &val)
-	{
-		return doubleToString(val.val);
-	}
-};
-
 constexpr int NORMAL_VAL = INT_MAX >> 1;
 const std::vector<SaleTestData> TEST_CASE_BWR =
 	{
@@ -56,4 +32,13 @@ SaleBoundaryTest::SaleBoundaryTest()
 	: SaleTestSuite(&Sale::solve, TEST_CASE_BWR, Sale(),
 					"Boundary Test")
 {
+}
+
+std::string doubleToString(const double& val)
+{
+	std::stringstream ss;
+	ss.setf(std::ios::fixed);
+	ss.precision(2);
+	ss << val << std::flush;
+	return ss.str();
 }

@@ -1,8 +1,8 @@
 #include <cstring>
 #include <ostream>
 
-#include <cgicc/Cgicc.h>
-#include <cgicc/HTTPContentHeader.h>
+//#include <cgicc/Cgicc.h>
+//#include <cgicc/HTTPContentHeader.h>
 #include <cppunit/extensions/TestFactoryRegistry.h>
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
@@ -15,9 +15,24 @@
 
 int main(int argc, char* argv[])
 {
-	cgicc::Cgicc cgi;
+	if (!std::strcmp(argv[1], "data"))
+	{
+		if (!std::strcmp(argv[2], "Triangle:solve:BoundaryTest"))
+		{
+			std::cout << TriangleBoundaryTest().data2Xml() << std::flush;
+		}
+		else if (!std::strcmp(argv[2], "Triangle:solve:EquivalentClassTest"))
+		{
+			std::cout << TriangleEqvClassTest().data2Xml() << std::flush;
+		}
+		else if (!std::strcmp(argv[2], "Sale:solve:BoundaryTest"))
+		{
+			std::cout << SaleBoundaryTest().data2Xml() << std::flush;
+		}
+		return 0;
+	}
+
 	std::stringstream ss;
-	const char* style_str = "<?xml-stylesheet type=\"text/xsl\" href=\"/test.xsl\"?>";
 
 	CppUnit::TestResult tr;
 	CppUnit::TestResultCollector trc;
@@ -48,8 +63,8 @@ int main(int argc, char* argv[])
 	CppUnit::XmlOutputter out(&trc, ss);
 	out.write();
 	std::string s = ss.str();
-	size_t index = s.find_last_of('?');
-	s.insert(index + 2, style_str);
+	//size_t index = s.find_last_of('?');
+	//s.insert(index + 2, style_str);
 
 	tinyxml2::XMLDocument doc;
 	doc.Parse(s.c_str());
@@ -62,9 +77,10 @@ int main(int argc, char* argv[])
 	doc.RootElement()->FirstChildElement("Statistics")
 		->InsertFirstChild(set_num_node);
 	tinyxml2::XMLPrinter printer;
+	doc.DeleteChild(doc.FirstChild());
 	doc.Print(&printer);
 
-	std::cout << cgicc::HTTPContentHeader("application/xml");
+	//std::cout << cgicc::HTTPContentHeader("application/xml");
 	std::cout << printer.CStr() << std::flush;
 
 	return !trc.wasSuccessful();

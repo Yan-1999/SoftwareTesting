@@ -7,30 +7,8 @@
 
 #include "../test_common.h"
 
-constexpr const char* TRIANGLE_TYPE_NAME[] =
-{
-	"NON",
-	"SCALENE",
-	"ISOSCELES",
-	"EQUILATERAL",
-};
-
 using TriangleTestData = TestData<Triangle::Type, int, int, int>;
 using TriangleTestCase = MyTestCase<Triangle, Triangle::Type, int, int, int>;
-
-template<>
-struct CppUnit::assertion_traits<Triangle::Type>
-{
-	static bool equal(const Triangle::Type& lhs, const Triangle::Type& rhs)
-	{
-		return lhs == rhs;
-	}
-
-	static std::string toString(const Triangle::Type& type)
-	{
-		return TRIANGLE_TYPE_NAME[(char)type];
-	}
-};
 
 constexpr int NORMAL_VAL = INT_MAX >> 1;
 const std::vector<TriangleTestData> TEST_CASE_BWR =

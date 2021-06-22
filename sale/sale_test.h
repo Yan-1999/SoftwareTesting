@@ -23,4 +23,22 @@ public:
 	SaleBoundaryTest();
 };
 
+const double EPS = 1e-6;
+
+std::string doubleToString(const double& val);
+
+template <>
+struct CppUnit::assertion_traits<Sale::Result>
+{
+	static bool equal(const Sale::Result& lhs, const Sale::Result& rhs)
+	{
+		return fabs(lhs.val - rhs.val) < EPS;
+	}
+
+	static std::string toString(const Sale::Result& val)
+	{
+		return doubleToString(val.val);
+	}
+};
+
 #endif // !SALE_TEST_H

@@ -101,9 +101,12 @@
                                 <th>语言</th>
                                 <th>版本</th>
                                 <th>
-                                    <!-- <input type="button" action="" value="全部加入测试套件" /> -->
                                     加入/移出测试套件
                                 </th>
+                                <th>
+                                    详情
+                                </th>
+
                             </tr>
                             <xsl:for-each select="//method">
                                 <tr>
@@ -126,6 +129,9 @@
                                         <input type="button" value="加入测试套件"
                                         id="{concat(normalize-space(../../class), ':', normalize-space(../name), ':', normalize-space(.))}"
                                         onclick="AddToSuite(this)" />
+                                    </td>
+                                    <td>
+                                        <a href="/cgi-bin/SoftwareTesting.py?data={concat(normalize-space(../../class), ':', normalize-space(../name), ':', normalize-space(.))}">详情</a>
                                     </td>
                                 </tr>
                             </xsl:for-each>
